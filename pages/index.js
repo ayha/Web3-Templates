@@ -16,13 +16,10 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          This is a web3 app starter template with different snippets and modules
+          Web3 Starter Template
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+       
 
         <div className={styles.grid}>
           <div className={styles.card}>
@@ -30,40 +27,38 @@ export default function Home() {
             <WalletConnector />
           </div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
+          <div className={styles.card}>
             <h2>Learn &rarr;</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
+          <div
             className={styles.card}
           >
             <h2>Examples &rarr;</h2>
             <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          </div>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          <div
             className={styles.card}
           >
             <h2>Deploy &rarr;</h2>
             <p>
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
-          </a>
+          </div>
         </div>
       </main>
-
+      
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://www.techballers.io/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          
           <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            <Image src="/techballers-logo.png" alt="Tech Ballers Logo" width={77} height={50} />
           </span>
         </a>
       </footer>

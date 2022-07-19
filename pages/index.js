@@ -18,9 +18,6 @@ export default function Home() {
         <h1 className={styles.title}>
           Web3 Starter Template
         </h1>
-
-       
-
         <div className={styles.grid}>
           <div className={styles.card}>
             <h2>Connect Wallet</h2>
@@ -28,24 +25,22 @@ export default function Home() {
           </div>
 
           <div className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+            <h2>Get Smart Contract Token</h2>
+            
           </div>
 
           <div
             className={styles.card}
           >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            <h2>Check Token Balance of Wallet</h2>
+          
           </div>
 
           <div
             className={styles.card}
           >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+            <h2>Interact with Smart Contract</h2>
+            
           </div>
         </div>
       </main>

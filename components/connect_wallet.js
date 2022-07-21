@@ -39,6 +39,8 @@ const WalletConnector = (props) => {
         // Get provided accounts and chainId
         const { accounts, chainId } = payload.params[0];
         console.log( accounts + " connected on " + chainId);
+        sessionStorage.setItem("connected_accounts", accounts);
+        console.log("session " + sessionStorage.getItem("connected_accounts")); 
       });
       
       connector.on("session_update", (error, payload) => {
@@ -89,6 +91,8 @@ const WalletConnector = (props) => {
         const accounts = await provider.send('eth_requestAccounts', []);
         console.log("Metamask connected") ;
         console.log(accounts);
+        sessionStorage.setItem("connected_accounts", accounts);
+        console.log("session " + sessionStorage.getItem("connected_accounts")); 
         //ta-da. you now have the accounts, in here you can invoke a function, setState etc
         } catch (error) {
         //do something with the error

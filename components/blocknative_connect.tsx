@@ -42,10 +42,10 @@ const Wallet = (props : Props) => {
 
        
        const connect = async () => { 
-            //onboard.setChain({ chainId: 1});
+            onboard.setChain({ chainId: 1});
             console.log(onboard);
-           // const wallets = await onboard.connectWallet();
-            //console.log(wallets);
+            const wallets = await onboard.connectWallet();
+            console.log(wallets);
        }
         
         

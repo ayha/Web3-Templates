@@ -12,12 +12,22 @@
     "@alch/alchemy-web3": "^1.4.6",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
+    "@mui/base": "^5.0.0-alpha.92",
     "@mui/icons-material": "^5.8.3",
     "@mui/material": "^5.9.1",
+    "@types/node": "^18.6.5",
+    "@types/react": "^18.0.17",
     "@walletconnect/node": "^1.0.0",
     "@walletconnect/qrcode-modal": "^1.7.8",
+    "@web3-onboard/core": "^2.6.0",
+    "@web3-onboard/injected-wallets": "^2.0.15",
+    "@web3-onboard/ledger": "^2.1.7",
+    "@web3-onboard/react": "^2.2.5",
+    "@web3-onboard/walletconnect": "^2.0.8",
     "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
     "ethers": "^5.6.9",
+    "fs": "^0.0.1-security",
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
@@ -26,6 +36,7 @@
   },
   "devDependencies": {
     "eslint": "8.17.0",
-    "eslint-config-next": "12.1.6"
+    "eslint-config-next": "12.1.6",
+    "typescript": "^4.7.4"
   }
 }

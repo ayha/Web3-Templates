@@ -6,7 +6,7 @@ import { ethers } from 'ethers';
 import NodeWalletConnect from "@walletconnect/node";
 import WalletConnectQRCodeModal from "@walletconnect/qrcode-modal";
 
-const WalletConnector = (props) => {
+const Wallet = (props) => {
 
    /*  const provider = new WalletConnectProvider({
         infuraId: 'b455f9f0e21a4629b2210b1a80b25cef',
@@ -102,9 +102,8 @@ const WalletConnector = (props) => {
     }
 
     return <div ><Button variant="contained" onClick={ connectWallet }>Connect Wallet</Button> 
-    <br /><br />
-    <Button variant="contained" onClick={ connectMetamask }>Connect Metamask</Button>
+   
     </div>
 }   
 
-export default WalletConnector;
+export default Wallet;

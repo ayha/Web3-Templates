@@ -2,7 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-import WalletConnector from '../components/connect_wallet';
+//import Wallet from '../components/connect_wallet';
+import Wallet from "../components/blocknative_connect";
+
 const axios = require('axios').default;
 
 
@@ -27,7 +29,7 @@ export default function Home() {
         <div className={styles.grid}>
           <div className={styles.card}>
             <h2>Connect Wallet</h2>
-            <WalletConnector />
+            <Wallet />
           </div>
 
           <div className={styles.card}>

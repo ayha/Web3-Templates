@@ -1,9 +1,11 @@
+import {useState, useEffect} from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 //import Wallet from '../components/connect_wallet';
-import Wallet from "../components/blocknative_connect";
+import BNWallet from "../components/blocknative_connect";
+import WCWallet from '../components/connect_wallet';
 
 const axios = require('axios').default;
 
@@ -14,6 +16,14 @@ const axios = require('axios').default;
 import { ETHERSCAN_KEY, ALCHEMY_KEY } from '../components/constants';
 
 export default function Home() {
+
+  const [connectedWallet, setConnectedWallet] = useState(null);
+
+  const setWallet = (wallet) => {
+    console.log(wallet);
+  }
+  
+
   return (
     <div className={styles.container}>
       <Head>
@@ -28,8 +38,13 @@ export default function Home() {
         </h1>
         <div className={styles.grid}>
           <div className={styles.card}>
-            <h2>Connect Wallet</h2>
-            <Wallet />
+            <h2>Connect Wallet </h2>
+            <h3>Blocknative</h3><BNWallet onConnect={setWallet} />
+           
+            
+            {connectedWallet != null && <h3>Connected Wallet</h3>}
+            {connectedWallet}
+            
           </div>
 
           <div className={styles.card}>

@@ -8,10 +8,7 @@ import WalletConnectQRCodeModal from "@walletconnect/qrcode-modal";
 
 const Wallet = (props) => {
 
-   /*  const provider = new WalletConnectProvider({
-        infuraId: 'b455f9f0e21a4629b2210b1a80b25cef',
-    }); */
-
+  
     const connector = new NodeWalletConnect(
         {
           bridge: "https://bridge.walletconnect.org", // Required

@@ -14,13 +14,15 @@ const axios = require('axios').default;
 
 
 import { ETHERSCAN_KEY, ALCHEMY_KEY } from '../components/constants';
+import { connected } from 'process';
 
 export default function Home() {
 
-  const [connectedWallet, setConnectedWallet] = useState(null);
+  const [connectedWallet, setConnectedWallet] = useState([]);
 
   const setWallet = (wallet) => {
     console.log(wallet);
+    setConnectedWallet(wallet);
   }
   
 
@@ -40,10 +42,15 @@ export default function Home() {
           <div className={styles.card}>
             <h2>Connect Wallet </h2>
             <h3>Blocknative</h3><BNWallet onConnect={setWallet} />
+            
+            
+            {connectedWallet != null &&
+            <div><h3>Connected Wallet</h3>
+                Connected to account {connectedWallet.accounts[0].address.slice(0, 5) + "..."} on {connectedWallet.chains[0].id} in {connectedWallet.label}  
+            </div>}
            
             
-            {connectedWallet != null && <h3>Connected Wallet</h3>}
-            {connectedWallet}
+
             
           </div>
 

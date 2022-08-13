@@ -1,11 +1,11 @@
 import {useState, useEffect } from 'react';
-import { OnboardAPI } from '@web3-onboard/core';
+import { WalletState } from '@web3-onboard/core';
 import injectedModule from '@web3-onboard/injected-wallets';
 import walletConnectModule from '@web3-onboard/walletconnect';
 import {init, useConnectWallet} from '@web3-onboard/react';
 import { Button } from '@mui/material';
 import { ethers } from 'ethers';
-import icon from '../components/icon';
+import icon from './icon';
 
 
 const INFURA_KEY = "b455f9f0e21a4629b2210b1a80b25cef"
@@ -27,23 +27,31 @@ init({
     }
 });
 
+type Props = {
+    onConnect: (wallet: WalletState | null) => void;
+}
 
-const Wallet = (props) => {
+const Wallet = (props : Props) => {
 
+    
+ 
     const [{wallet, connecting}, connect, disconnect] = useConnectWallet();
+
+    useEffect( () => {
+      
+            props.onConnect(wallet);
+       
+    }, [wallet]);
+
 
     const handleConnect  = async () => {
         if(wallet) {
-            console.log(wallet);
-            // already connected
-            console.log("disconnect");
+          
             disconnect(wallet);
-         //   props.onDisconnect();
+         
         } else {
             connect();
 
-           // console.log("connected wallet : " + wallet);
-           // props.onConnect(wallet);
         }
     }
 
